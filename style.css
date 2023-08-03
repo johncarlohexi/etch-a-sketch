@@ -33,3 +33,8 @@ body {
 .box-grid {
     width: 100%;
 }
+
+#colors {
+    width: 20%;
+    height: 2rem;
+}

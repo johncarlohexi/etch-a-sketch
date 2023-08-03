@@ -1,6 +1,7 @@
 const box = document.querySelector(".box")
 const btn = document.querySelector("#btn")
 
+
 let getHeight;
 let getWidth;
 
@@ -46,6 +47,8 @@ function makeBox(height, width) {
     box.appendChild(makeDiv)
 }
 
+
+
 let boxWidth = getHeight;
 
 
@@ -65,10 +68,29 @@ function makeGrid(gWidth, gHeight, boxWidth) {
     }
 }
 
+
+
+
 btn.addEventListener("click", () => {
     getUserInput()
     checkIfString(getHeight, getWidth)
     makeBox(getHeight, getWidth)
     boxWidth = getWidth;
     makeGrid(gridWidth, gridHeight, boxWidth)
+    colorGrid()
 } )
+
+const getGrids = document.getElementsByClassName("box-grid")
+
+function colorGrid() {
+
+    for (let i = 0; i < getGrids.length; i++) {
+        getGrids[i].addEventListener("mouseover", colorGrid)
+    }
+    this.style.backgroundColor = "blue"
+}
+
+
+
+
+
