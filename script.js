@@ -81,16 +81,25 @@ btn.addEventListener("click", () => {
 } )
 
 const getGrids = document.getElementsByClassName("box-grid")
+let makeColor = "white";
 
 function colorGrid() {
-
     for (let i = 0; i < getGrids.length; i++) {
         getGrids[i].addEventListener("mouseover", colorGrid)
     }
-    this.style.backgroundColor = "blue"
+    this.style.backgroundColor = makeColor;
 }
 
 
+document.getElementById("selectColor").addEventListener("click", () => {
+let getColor = document.getElementById("colors")
+let colorValue = getColor.options[getColor.selectedIndex].value
+makeColor = colorValue
+console.log(makeColor)
+})
 
-
-
+document.getElementById("eraseAll").addEventListener("click", () => {
+    for (let i = 0; i < getGrids.length; i++) {
+        getGrids[i].style.backgroundColor = "white";
+    }
+})

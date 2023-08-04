@@ -38,3 +38,13 @@ body {
     width: 20%;
     height: 2rem;
 }
+
+#selectColor {
+    width: 20%;
+    height: 2rem;
+}
+
+#eraseAll {
+    width: 10%;
+    height: 2rem;
+}
